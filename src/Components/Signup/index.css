@@ -1,0 +1,181 @@
+.signup-container{
+    background-image: linear-gradient(to right, #04162d, #030b18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 20px;
+}
+
+/* Base styles for the header */
+.Signup-header {
+    font-size: 30px;
+    text-align: center;
+    color: #c2c2c2; /* Choose a color that suits your theme */
+    font-family: 'Arial', sans-serif; /* Choose a font that matches your design */
+    font-weight: bold;
+  
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+.Signup-Par{
+    font-size: 15px;
+    text-align: center;
+    color: #7d7d7d; /* Choose a color that suits your theme */
+    font-family: 'Arial', sans-serif; /* Choose a font that matches your design */
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+/* Keyframes for fade-in and upward movement animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-customer-container {
+  
+ 
+   margin-top: 70px;
+  
+   
+     background-image: linear-gradient(to right, #04162d, #030b18);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    height: 100vh;
+    width: 100%;
+
+}
+
+.signup-image-container{
+    width: 50%;
+    align-self: flex-start;
+   
+ 
+
+}
+/* Styles for the form */
+.signup-customer-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    align-self:flex-start;
+    width:50%;
+    margin-left: 50px;
+    background-color: #ffffff0d;
+    border-radius: 15px;
+}
+
+/* Each form group (label and input) */
+.signup-customer-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.signup-customer-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Input fields */
+.signup-customer-input {
+    width: 100%;
+    padding: 10px;
+
+    background-color: #1e1a1a;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+/* Submit button */
+.signup-customer-button {
+    padding: 10px 20px;
+    background-color: #9a3bcf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.signup-customer-button:hover {
+    background-color: #4e0f70
+}
+
+/* Google signup button */
+
+.Login-link{
+    text-align: center;
+    color: #7d7d7d;
+    text-decoration: none;
+    margin-top: 9px;
+}
+.Login-text{
+    color: rgb(198, 8, 241);
+}
+/* index.css */
+
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+.google-signup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #be35e8; /* Google's blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the button full-width */
+    max-width: 320px; /* Optional: limit button width */
+    margin: 10px 0; /* Add spacing around the button */
+  }
+  
+  .google-signup-button:hover {
+    background-color: #be35e8; /* Darker blue on hover */
+  }
+  
+  .google-signup-button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .google-signup-button img {
+    margin-right: 10px; /* Space between icon and text */
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    border-radius: 50%;
+  }

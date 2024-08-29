@@ -1,0 +1,138 @@
+.detail-container {
+    padding: 2rem 6rem;
+    color: white;
+  }
+  
+  .detail-header {
+    margin-bottom: 20px;
+  }
+  
+  .detail-content {
+    padding: 2rem 4rem;
+    background: rgba(255, 255, 255, 0.119);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+  }
+  
+  .carousel-container {
+    margin-top: 20px;
+  }
+  
+  .carousel .slide img {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .book-container{
+    margin-top: 15px;
+   
+  }
+  .carousel .control-dots .dot {
+    background: white;
+  }
+  
+  .detail-content-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+  
+  .desc-container h4 {
+    color: rgba(255, 255, 255, 0.639);
+  }
+  
+  .chart-card {
+    margin-left: 20px;
+    padding: 0 20px;
+    background: rgba(255, 255, 255, 0.0001);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 200px;
+  }
+  
+  .desc-container button {
+    font-family: var(--font-family-2);
+    border: none;
+    background: none;
+    color: white;
+    font-size: 16px;
+    background-color: hsl(271, 95%, 60%);
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .desc-container button:hover {
+    background-color: hsl(271, 100%, 55%);
+  }
+  
+  
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+  }
+  
+  .info-container p {
+    color: rgba(255, 255, 255, 0.451);
+  }
+  
+  .detail-content.loading {
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 2rem 6rem;
+  }
+  
+  .service-category-pill {
+    margin: 20px 0;
+    padding: 10px 1rem;
+    color: white;
+    width: max-content;
+    border-radius: 20px;
+    background-color: hsl(271, 95%, 60%);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .service-category-pill:hover {
+    background-color: hsl(271, 100%, 55%);
+  }
+  
+  .service-page-details {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .service-page-details h2 {
+    margin-bottom: 5px;
+    color: #a855f7;
+  }
+  
+  .service-page-details ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  
+  .service-page-details li {
+    margin-bottom: 3px;
+  }
+  
+  .service-page-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .price-book{
+    display: flex;
+    justify-content: space-between;
+  }

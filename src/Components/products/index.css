@@ -1,0 +1,7 @@
+.all-products-section{
+    display: flex;
+}
+.all-products-container{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,8 @@
+.image-carousel{
+    height:430px;
+    border-radius: 5px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
