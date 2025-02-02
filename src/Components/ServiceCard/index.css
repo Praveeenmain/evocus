@@ -3,7 +3,7 @@
   margin-bottom: 48px;
   width: 350px;
   flex-grow: 1;
-  
+  height: 480px;
   margin-right: 24px;
   background: linear-gradient(to left,#030b18 , #030b18);
   color: #c4c4c4; /* Ensures all text inside the product item is white */
@@ -57,4 +57,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #c4c4c4;
+  }
+  .service-card-title{
+    font-size: 20px;
   }

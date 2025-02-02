@@ -27,9 +27,11 @@ const AllServicesSection = () => {
   const [servicesList, setServicesList] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
   const [activeOptionId, setActiveOptionId] = useState(sortbyOptions[0].optionId);
-  const [activeCategoryId, setActiveCategoryId] = useState(categoryOptions[0].categoryId);
+  const [activeCategoryId, setActiveCategoryId] = useState('');
   const [searchInput, setSearchInput] = useState('');
   const [locationSearch, setLocationSearch] = useState('');
+  const [currentPage, setCurrentPage] = useState(1); // Track current page
+  const servicesPerPage = 6; // Number of services per page (updated to 6)
 
   const getServices = useCallback(async () => {
     setApiStatus(apiStatusConstants.inProgress);
@@ -91,7 +93,12 @@ const AllServicesSection = () => {
   );
 
   const renderServicesListView = () => {
-    if (servicesList.length === 0) {
+    // Pagination logic: slice the services list to display only 6 services per page
+    const startIndex = (currentPage - 1) * servicesPerPage;
+    const endIndex = startIndex + servicesPerPage;
+    const paginatedServices = servicesList.slice(startIndex, endIndex);
+
+    if (paginatedServices.length === 0) {
       return (
         <div className="no-services-view">
           <img
@@ -107,17 +114,36 @@ const AllServicesSection = () => {
       );
     }
 
+    // Generate page numbers based on the total number of services and services per page
+    const totalPages = Math.ceil(servicesList.length / servicesPerPage);
+    const pageNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pageNumbers.push(i);
+    }
+
     return (
       <div className='service-list-header'>
-         <ServicesHeader  
-         activeCategoryId={activeCategoryId}
+        <ServicesHeader  
+          activeCategoryId={activeCategoryId}
           activeOptionId={activeOptionId}
           sortbyOptions={sortbyOptions}
           changeSortby={changeSortby}
         />
         <div className="all-services-container">
-          {servicesList.map(service => (
+          {paginatedServices.map(service => (
             <ServiceCard service={service} key={service._id} />
+          ))}
+        </div>
+        {/* Pagination controls */}
+        <div className="pagination-container">
+          {pageNumbers.map(pageNumber => (
+            <button
+              key={pageNumber}
+              onClick={() => setCurrentPage(pageNumber)}
+              className={currentPage === pageNumber ? 'active' : ''}
+            >
+              {pageNumber}
+            </button>
           ))}
         </div>
       </div>

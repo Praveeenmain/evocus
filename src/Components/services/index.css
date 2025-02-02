@@ -78,5 +78,32 @@
   }
  
   
+  .pagination-container {
+    display: flex;
+    justify-content: center;  /* Align buttons to the right */
+    margin-bottom: 25px;
+    align-items: center;
+    margin-right: 25px;
+
+  }
+  
+  .pagination-container button {
+    margin-right: 5px;
+    border: none;
+    background-color: #0b69ff;
+    color: white;
+    cursor: pointer;
+  }
+  
+
+  .pagination-container button.active {
+    background-color: #003366;
+    font-weight: bold;
+  }
+  
+  .pagination-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
   
   
