@@ -8,6 +8,9 @@ import './index.css';
 
 const categoryOptions = [
   { name: 'Event Manager', categoryId: 'Event Manager' },
+ 
+  { name: 'Photography', categoryId: 'PHOTOGRAPHER' },
+  { name: 'Food', categoryId: 'CATERING' },
   { name: 'Other', categoryId: 'Other' },
 ];
 
