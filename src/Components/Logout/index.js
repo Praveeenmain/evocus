@@ -1,7 +1,7 @@
 import React from 'react';
 import { getAuth, signOut } from "firebase/auth";
 import { useHistory } from 'react-router-dom';
-
+import './index.css'
 const LogoutButton = () => {
     const auth = getAuth();
     const history = useHistory();
