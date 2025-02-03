@@ -8,7 +8,6 @@ import './index.css';
 
 const categoryOptions = [
   { name: 'Event Manager', categoryId: 'Event Manager' },
- 
   { name: 'Photography', categoryId: 'PHOTOGRAPHER' },
   { name: 'Food', categoryId: 'CATERING' },
   { name: 'Other', categoryId: 'Other' },
@@ -26,6 +25,14 @@ const apiStatusConstants = {
   inProgress: 'IN_PROGRESS',
 };
 
+// Function to shuffle array for random AI-like recommendations
+const shuffleArray = (array) => {
+  return array
+    .map((item) => ({ item, sort: Math.random() })) // Assign random values
+    .sort((a, b) => a.sort - b.sort) // Sort based on random values
+    .map(({ item }) => item); // Extract shuffled items
+};
+
 const AllServicesSection = () => {
   const [servicesList, setServicesList] = useState([]);
   const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
@@ -34,7 +41,7 @@ const AllServicesSection = () => {
   const [searchInput, setSearchInput] = useState('');
   const [locationSearch, setLocationSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(1); // Track current page
-  const servicesPerPage = 6; // Number of services per page (updated to 6)
+  const servicesPerPage = 6; // Number of services per page
 
   const getServices = useCallback(async () => {
     setApiStatus(apiStatusConstants.inProgress);
@@ -45,7 +52,7 @@ const AllServicesSection = () => {
       const response = await fetch(apiUrl);
       if (response.ok) {
         const fetchedData = await response.json();
-        setServicesList(fetchedData || []);
+        setServicesList(shuffleArray(fetchedData || [])); // Shuffle the fetched data
         setApiStatus(apiStatusConstants.success);
       } else {
         setApiStatus(apiStatusConstants.failure);
@@ -96,12 +103,7 @@ const AllServicesSection = () => {
   );
 
   const renderServicesListView = () => {
-    // Pagination logic: slice the services list to display only 6 services per page
-    const startIndex = (currentPage - 1) * servicesPerPage;
-    const endIndex = startIndex + servicesPerPage;
-    const paginatedServices = servicesList.slice(startIndex, endIndex);
-
-    if (paginatedServices.length === 0) {
+    if (servicesList.length === 0) {
       return (
         <div className="no-services-view">
           <img
@@ -117,12 +119,14 @@ const AllServicesSection = () => {
       );
     }
 
+    // Pagination logic: slice the services list to display only 6 services per page
+    const startIndex = (currentPage - 1) * servicesPerPage;
+    const endIndex = startIndex + servicesPerPage;
+    const paginatedServices = servicesList.slice(startIndex, endIndex);
+
     // Generate page numbers based on the total number of services and services per page
     const totalPages = Math.ceil(servicesList.length / servicesPerPage);
-    const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pageNumbers.push(i);
-    }
+    const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     return (
       <div className='service-list-header'>
