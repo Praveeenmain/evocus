@@ -89,8 +89,22 @@ const Header = (props) => {
                         </button>
                       </li>
                       <li>
+                      <a 
+  href="https://merchant.razorpay.com/policy/Q01qCq6xWBRAFQ/terms" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  style={{ textAlign: 'center', color: 'black', textDecoration: 'none',marginLeft:'15px' }}
+>
+  Terms
+</a>
+
+
+
+                      </li>
+                      <li>
                         <LogoutButton />
                       </li>
+                    
                     </ul>
                   </div>
 
