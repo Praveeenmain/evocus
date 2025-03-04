@@ -1,0 +1,53 @@
+.bookingpage-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(21, 20, 20, 0.1);
+    background-color: #08173a;
+    color: #fff8f8;
+
+  }
+  
+  .bookingpage-title {
+    text-align: center;
+    color: #fff8f8;
+  }
+  
+  .bookingpage-service {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .bookingpage-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .bookingpage-label {
+    font-weight: bold;
+  }
+  
+  .bookingpage-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .bookingpage-button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .bookingpage-button:hover {
+    background-color: darkgreen;
+  }
+  

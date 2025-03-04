@@ -1,0 +1,38 @@
+/* Write your CSS here */
+/* Write your CSS here */
+.cart-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 200px;
+    color:aliceblue;
+  }
+  .checkout {
+    background-color: #0b69ff;
+    height: 50px;
+    width: 150px;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .summary-heading {
+    font-size: 15px;
+    font-family: 'roboto';
+    color:aliceblue
+  }
+  .summary-paragraph {
+    font-size: 20px;
+    font-family: 'roboto';
+  }
+  
+  @media (max-width: 600px) {
+    .cart-summary-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  
