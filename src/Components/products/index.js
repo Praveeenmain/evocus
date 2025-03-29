@@ -4,6 +4,7 @@ import ProductFilterGroup from '../ProductFliterGroup'; // Corrected import path
 import ProductCard from '../ProductCard'; // Corrected import path
 import ProductHeader from '../ProductHeader';
 import Header from '../Header';
+import AI from '../EvobuzAi';
 import './index.css';
 
 const productCategories = {
@@ -194,6 +195,7 @@ const AllProductSection = () => {
           enterSearchInput={enterSearchInput}
         />
         {renderAllProducts()}
+        <AI/>
       </div>
     </>
   );

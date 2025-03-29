@@ -5,6 +5,7 @@ import ServiceCard from '../ServiceCard';
 import ServicesHeader from '../ServicesHeader';
 import Header from '../Header';
 import './index.css';
+import AI from '../EvobuzAi';
 
 const categoryOptions = [
   { name: 'Event Manager', categoryId: 'Event Manager' },
@@ -189,6 +190,7 @@ const AllServicesSection = () => {
           enterSearchInput={enterSearchInput}
         />
         {renderAllServices()}
+        <AI/>
       </div>
     </>
   );
